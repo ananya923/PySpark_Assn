@@ -3,6 +3,25 @@
 
 ---
 
+## Repository Structure
+
+```markdown
+Project Root
+├── screenshots/        # images of output
+│ ├── image.png
+│ ├── image-1.png
+│ ├── image-2.png
+│ ├── image-3.png
+│ ├── image-4.png
+│ ├── image-5.png
+│ └── image-6.png
+│
+├── pyspark_assn_aj463.ipynb    # jupyter notebook from databricks
+├── pyspark_assn_aj463.html     # html file from jupyter notebook
+├── pyspark_assn_aj463.pdf      # PDF for readability
+└── README.md                   # project documentation
+```
+
 ## Dataset Description and Source
 
 ### Dataset Overview
@@ -226,19 +245,15 @@ root
 ## Screenshots
 
 ### 1. Query Execution Plan
-*[Screenshot showing .explain() output demonstrating filter pushdown and optimized execution plan]*
 - ![](screenshots/image.png)
 - ![](screenshots/image-1.png)
 
 
 ### 2. Successful Pipeline Execution
-*[Screenshot showing complete pipeline execution with timing metrics]*
 I compared performance at each stage, as summarized above in this README file. Below is a screenshot of the performance comparison between lazy execution and action-triggered execution:
 ![](screenshots/image-5.png)
 
 ### 3. Query Details View - Optimization
-*[Screenshot from Spark UI showing query optimization stages]*
-The following 
 - ![](screenshots/image-2.png)
 - ![](screenshots/image-3.png)
 - ![](screenshots/image-4.png)
@@ -246,21 +261,6 @@ The following
 ### 4. Output Files
 By creating a Volume and sub-folders, we can write our outputs to parquet files.
 - ![](screenshots/image-6.png)
-
-**Optimization Evidence:**
-- Fewer stages in optimized query
-- Reduced shuffle read/write volumes
-- Better task distribution
-- Catalyst optimizer transformations
-
-### 4. Performance Comparison Summary
-*[Screenshot showing final performance metrics table]*
-
-**Highlights:**
-- Side-by-side time comparisons
-- Improvement percentages
-- Shuffle operation counts
-- Data volume processed
 
 ---
 
